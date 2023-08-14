@@ -17,20 +17,20 @@ def fullPythonApp():
 	appName.pack()
 	
 	def WebGUI():
-		import WebGUI
+		import SoleStormCatPY.WebGUI
 		
 	WebB = tk.Button(window,text='Web', command=lambda: WebGUI())
 	WebB.pack()
 	
 	def TerminalGUI():
-		import TerminalGUI
+		import SoleStormCatPY.TerminalGUI
 	
 	TerminalB = tk.Button(window,text='Terminal', command=lambda: TerminalGUI())
 	TerminalB.pack()
 	
 	
 	def SystemInfo():
-		import SystemInfo as si
+		import SoleStormCatPY.SystemInfo as si
 		si.systemPrint()
 	
 	SystemInfoB = tk.Button(window,text='System Info', command=lambda: SystemInfo())
@@ -38,7 +38,7 @@ def fullPythonApp():
 	
 	
 	def ClockTimerGUI():
-		import ClockTimerGUI
+		import SoleStormCatPY.ClockTimerGUI
 		
 	ClockTimerB = tk.Button(window,text='ClockTimer', command=lambda: ClockTimerGUI())
 	ClockTimerB.pack()
