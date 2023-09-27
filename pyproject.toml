@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "SoleStormCatPY"
-version = "0.5"
+version = "0.5.1"
 authors = [
   { name="SoleStormCat Corp", email="solestormcat.corp@proton.me" },
 ]
