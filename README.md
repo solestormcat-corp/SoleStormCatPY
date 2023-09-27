@@ -4,7 +4,8 @@ SoleStormCatPY is an app developed to help you throughout your day. Here are som
 
 (Not all scripts/apps are originaly from SoleStormCat Corp. Here is a list of apps that are effected, and includes a link to the original source:
 1. [Standalone App](https://www.geeksforgeeks.org/python-menu-widget-in-tkinter/)
-1. [ClockTimer](https://www.geeksforgeeks.org/creating-tabbed-widget-with-python-tkinter/) (FOR THE TAB FEATURE ONLY)
+1. [ClockTimer and Standalone App](https://www.geeksforgeeks.org/creating-tabbed-widget-with-python-tkinter/) (FOR THE TAB FEATURE ONLY)
+1. [Files](https://data-flair.training/blogs/python-file-explorer-project/) (THIS IS A MODIFED VERSION OF THE PROJECT)
 )
 ## ModuleInstaller
 This is not an app, but instead, you can run this inside Python to insure that you have everything that is required to run SoleStormCatPY! (Unless you only use the executables, then this dosn't apply to you)
@@ -95,12 +96,28 @@ SystemInfo.systemPrint()`
 This application acts as a timer. The user can set the time (in minutes (Along with seconds and hours in the GUI)), or the developer can set the timer (in seconds). Everything will be printed out into the terminal (or the GUI), and will set the timer.
 
 ### How To Use
-There is three different ways to use `ClockTimer`. The First being the process where the user sets the timer, the second being where the developer sets the timer, and the third being the GUI mode.
-`import SoleStormCatPY.ClockTimer as PyTimer
-PyTimer.clockTimer()`
+There is four different ways to use `ClockTimer`. The First being the process where the user sets the timer, the second being where the developer sets the timer, and the third being the GUI mode.
+`import SoleStormCatPY.ClockTimer as PyTimer` and `PyTimer.clockTimerCMD()`
+AND (Also Terminal)
+`import SoleStormCatPY.ClockTimer as PyTimer` and `seconds = 12` and `PyTimer.clockTimerManual(seconds)`
+AND (GUI)
+`import SoleStormCatPY.ClockTimer as PyTimer` and `PyTimer.clockTimerGUI()`
+AND FINALLY (GUI in Standalone App)
+Open the Standalone app, and click the `ClockTimer` Button!
 
-`import SoleStormCatPY.ClockTimer as PyTimer
-seconds = 12
-PyTimer.clockTimerManual(seconds)`
+## Files
+Files is a basic file program, allowing you to open files/folders, to rename files, and to delete files/folders. This runs in both the terminal and GUI.
 
-`import SoleStormCatPY.ClockTimerGUI`
+### Current Issues
+SoleStormCat Corp. currently has knowledge of these issues:
+
+1. Files has an issue when opening folders, saying "Permission Denied" (This has only been tested on Linux). There is currently no known fix to this.
+
+### How To Use
+There are two different ways to use `files`, with the first being in the terminal, and the second being through GUI. To run the terminal version, type `import SoleStormCatPY.files` and `SoleStormCatPY.files.filesCMD()` into your terminal. For GUI, you can either run the main GUI app, or you can run `import SoleStormCatPY.files` and `SoleStormCatPY.files.filesGUI` into the terminal.
+
+## GreeNotes
+`GreeNotes` is an application that allows users to write (or read) reminders that they make. This app writes a file named `.sscGreeNotes` file to the local computer, and nothing gets uploaded online. You can even read/write your reminders from this file!
+
+### How To Use
+There are 2 ways to run `GreeNotes`, but both require interactions with the terminal. To run this application (the main method), use `import SoleStormCatPY.GreeNotes` and `SoleStormCatPY.GreeNotes.GreeNotes()` in the terminal. The other way is to run SoleStormCatPY GUI application, then change the tab to `Terminal Apps`, then click on `GreeNotes (Terminal)`.
