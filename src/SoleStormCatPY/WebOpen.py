@@ -81,7 +81,7 @@ def webGUI():
 		webCMD(website)
 	
 	frame = tk.Tk()
-	frame.title("Enterwebsite = inputtxt.get(1.0, "end-1c") A Website URL")
+	frame.title("SoleStormCatPY - WebOpen")
 	frame.geometry('500x125')
 	inputtxt = tk.Text(frame,
 	height = 1,
