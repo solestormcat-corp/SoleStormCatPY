@@ -22,7 +22,7 @@ import tkinter.ttk as ttk
 
 def timeout():
     print("Finished Timer!")
-    playsound('ClockTimerAssets//timerUP.wav')
+    playsound('SoleStormCatPY.ClockTimerAssets.timerUP')
 
 def getNum():
     minutesSTR = input('How Many Minutes do you require?     ')
@@ -57,7 +57,7 @@ def clockTimerGUI():
 		text = "Your Timer Has Ended!")
 		lblEND.pack()
 		
-		playsound('ClockTimerAssets//timerUP.wav')
+		playsound('SoleStormCatPY.ClockTimerAssets.timerUP')
 		frameEND.mainloop()
 		
 	def clockTimerGUIS():
