@@ -27,13 +27,8 @@ def FilesGUI():
 	files.filesGUI()
 	
 "For TERMINAL apps"
-def GreeNotesCMD():
-	import SoleStormCatPY.GreeNotes as gn
-	gn.GreeNotes()
-	
-def FilesCMD():
-	import SoleStormCatPY.files
-	files.filesCMD()
+import SoleStormCatPY.GreeNotes as GN
+import SoleStormCatPY.files
 	
 "App Loader:"
 def fullPythonApp():
@@ -64,8 +59,8 @@ def fullPythonApp():
 	
 	CMDappsBar = Menu(MenuBar, tearoff=0)
 	MenuBar.add_cascade(label ="Apps (Terminal)", menu = CMDappsBar)
-	CMDappsBar.add_command(label ="GreeNotes (Terminal)", command=GreeNotesCMD())
-	CMDappsBar.add_command(label ="Files (Terminal)", command=FilesCMD())
+	CMDappsBar.add_command(label ="GreeNotes (Terminal)", command=GN.GreeNotes())
+	CMDappsBar.add_command(label ="Files (Terminal)", command=SoleStormCatPY.files.filesCMD())
 	
 	"GUI TAB"
 	appLabel = Label(tabGUI, text = 'Welcome to "SoleStormCatPY"! Please choose an app below!')
@@ -94,10 +89,10 @@ def fullPythonApp():
 	appLabel = Label(tabCMD, text = 'Welcome to "SoleStormCatPY"! Please choose an app below! (Terminal Apps)')
 	appLabel.pack()
 	
-	GreeNotesB = Button(tabCMD,text="GreeNotes (Terminal)", command=lambda: GreeNotesCMD())
+	GreeNotesB = Button(tabCMD,text="GreeNotes (Terminal)", command=lambda: GN.GreeNotes())
 	GreeNotesB.pack()
 	
-	FilesB = Button(tabCMD,text="Files (Terminal)", command=lambda: GreeNotesCMD())
+	FilesB = Button(tabCMD,text="Files (Terminal)", command=lambda: SoleStormCatPY.files.filesCMD())
 	FilesB.pack()
 	
 	frame.config(menu = MenuBar)
