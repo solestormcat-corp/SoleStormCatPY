@@ -25,7 +25,20 @@ def ClockTimerGUI():
 def FilesGUI():
 	import SoleStormCatPY.files
 	files.filesGUI()
+
+def SoleStormCatUpdate():
+	UpgradeFrame = Tk()
+	UpgradeFrame.title('SoleStormCatPY - Update')
+	UpgradeFrame.geometry('50x1000')
 	
+	UpgradeLabel = Label(UpgradeFrame, text='SoleStormCatPY is currently being upgraded to the latest version. You may view progress in terminal.')
+	UpgradeLabel.pack()
+	
+	os.system('pip install --upgrade SoleStormCatPY')
+	
+	UpgradeLabel.mainloop()
+	
+
 "For TERMINAL apps"
 import SoleStormCatPY.GreeNotes as GN
 import SoleStormCatPY.files
@@ -47,6 +60,7 @@ def fullPythonApp():
 	MenuBar = Menu(frame)
 	file = Menu(MenuBar, tearoff=0)
 	MenuBar.add_cascade(label ="File", menu = file)
+	file.add_command(label ="Update", command=SoleStormCatUpdate)
 	file.add_command(label ="Quit", command=quit)
 	
 	appsBar = Menu(MenuBar, tearoff=0)

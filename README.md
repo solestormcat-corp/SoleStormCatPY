@@ -51,6 +51,8 @@ This meantions the certain websites that you can access by name. The Format for 
 1. [Local-Hosted Website](http://localhost), "Local"
 1. [Microsoft 365](https://microsoft365.com), "Microsoft 365"
 1. [Minecraft](https://minecraft.net), "Minecraft"
+1. [Netflix](https://netflix.com), "Netflix"
+1. [PlayStation](https://playstation.com), "PlayStation"
 1. [Python](https://python.org), "Python"
 1. [SoleStormCatPY - GitHub](https://github.com/solestormcat-corp/solestormcatpy) and [SoleStormCatPY - PyPi](https://pypi.org/project/SoleStormCatPY/), "SoleStormCatPY"
 1. [Twitter](https://twitter.com), "Twitter"

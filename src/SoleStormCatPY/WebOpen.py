@@ -67,6 +67,12 @@ def webCMD(website):
 		print("Sending you to SoleStormCatPY's GitHub and PyPi websites!")
 		webbrowser.open('https://github.com/solestormcat-corp/solestormcatpy')
 		webbrowser.open('https://pypi.org/project/SoleStormCatPY')
+	elif website == 'Netflix':
+		print('Sending you to Netflix!')
+		webbrowser.open('https://netflix.com')
+	elif website == 'PlayStation':
+		print('Sending you to PlayStation!')
+		webbrowser.open('https://playstation.com')
 	else:
 		"This runs if the user's website is not in the list."
 		print('Sending you to: ', website, '!')

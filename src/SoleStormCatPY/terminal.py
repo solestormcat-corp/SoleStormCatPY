@@ -25,7 +25,11 @@ import os
 
 "This Runs the command specified!"
 def terminalrun(command):
-	os.system(command)
+	if command == 'UpgrdePyApp':
+		print('Updating SoleStormCatPY!')
+		os.system('pip install --upgrade SoleStormCatPY')
+	else:
+		os.system(command)
 	
 def terminalGUI():
 	import tkinter as tk
