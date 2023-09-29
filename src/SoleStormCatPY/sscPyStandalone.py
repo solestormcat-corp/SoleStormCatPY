@@ -8,6 +8,7 @@ SSCstand.fullPythonApp()
 from tkinter import *
 from tkinter.ttk import *
 from time import strftime
+import os
 
 "Apps"
 def WebGUI():
@@ -18,13 +19,13 @@ def TerminalGUI():
 	SoleStormCatPY.terminal.terminalGUI()
 def SystemInfo():
 	import SoleStormCatPY.SystemInfo as si
-	si.systemInfoPrint(deviceOS,userName,pythonVersion)
+	si.systemInfoPrint()
 def ClockTimerGUI():
 	import SoleStormCatPY.ClockTimer
 	SoleStormCatPY.ClockTimer.clockTimerGUI()
 def FilesGUI():
 	import SoleStormCatPY.files
-	files.filesGUI()
+	SoleStormCatPY.files.filesGUI()
 
 def SoleStormCatUpdate():
 	UpgradeFrame = Tk()
@@ -38,24 +39,11 @@ def SoleStormCatUpdate():
 	
 	UpgradeLabel.mainloop()
 	
-
-"For TERMINAL apps"
-import SoleStormCatPY.GreeNotes as GN
-import SoleStormCatPY.files
-	
 "App Loader:"
 def fullPythonApp():
 	frame = Tk()
 	frame.title('SoleStormCatPY')
 	frame.geometry('1024x768')
-	
-	tabControl = Notebook(frame)
-
-	tabGUI = Frame(tabControl)
-	tabCMD = Frame(tabControl)
-	tabControl.add(tabGUI, text="GUI Apps")
-	tabControl.add(tabCMD, text="Terminal Apps")
-	tabControl.pack(expand=1, fill="both")
 	
 	MenuBar = Menu(frame)
 	file = Menu(MenuBar, tearoff=0)
@@ -71,43 +59,29 @@ def fullPythonApp():
 	appsBar.add_command(label ="Web", command=WebGUI)
 	appsBar.add_command(label ="Files", command=FilesGUI)
 	
-	CMDappsBar = Menu(MenuBar, tearoff=0)
-	MenuBar.add_cascade(label ="Apps (Terminal)", menu = CMDappsBar)
-	CMDappsBar.add_command(label ="GreeNotes (Terminal)", command=GN.GreeNotes())
-	CMDappsBar.add_command(label ="Files (Terminal)", command=SoleStormCatPY.files.filesCMD())
-	
 	"GUI TAB"
-	appLabel = Label(tabGUI, text = 'Welcome to "SoleStormCatPY"! Please choose an app below!')
+	appLabel = Label(frame, text = 'Welcome to "SoleStormCatPY"! Please choose an app below!')
 	appLabel.pack()
 	
 		
-	WebB = Button(tabGUI,text='Web', command=lambda: WebGUI())
+	WebB = Button(frame,text='Web', command=lambda: WebGUI())
 	WebB.pack()
 	
 	
-	TerminalB = Button(tabGUI,text='Terminal', command=lambda: TerminalGUI())
+	TerminalB = Button(frame,text='Terminal', command=lambda: TerminalGUI())
 	TerminalB.pack()
 	
 	
-	SystemInfoB = Button(tabGUI,text='System Info', command=lambda: SystemInfo())
+	SystemInfoB = Button(frame,text='System Info', command=lambda: SystemInfo())
 	SystemInfoB.pack()
 	
 		
-	ClockTimerB = Button(tabGUI,text='ClockTimer', command=lambda: ClockTimerGUI())
+	ClockTimerB = Button(frame,text='ClockTimer', command=lambda: ClockTimerGUI())
 	ClockTimerB.pack()
 	
-	FilesGUIB = Button(tabGUI,text='Files', command=lambda: FilesGUI())
+	FilesGUIB = Button(frame,text='Files', command=lambda: FilesGUI())
 	FilesGUIB.pack()
-	
-	"TERMINAL TAB"
-	appLabel = Label(tabCMD, text = 'Welcome to "SoleStormCatPY"! Please choose an app below! (Terminal Apps)')
-	appLabel.pack()
-	
-	GreeNotesB = Button(tabCMD,text="GreeNotes (Terminal)", command=lambda: GN.GreeNotes())
-	GreeNotesB.pack()
-	
-	FilesB = Button(tabCMD,text="Files (Terminal)", command=lambda: SoleStormCatPY.files.filesCMD())
-	FilesB.pack()
+
 	
 	frame.config(menu = MenuBar)
 	frame.mainloop()

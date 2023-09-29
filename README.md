@@ -22,11 +22,11 @@ Have Fun Mathing!
 
 ## Web
 
-"Web" is not as it might see. It's not a web browser, but a web browser opener! You enter the URL of the website you want (including `http://`), and you'll be sent to the website. And, you also get to put in names for specific websites that lead to them with only the name!
+"WebOpen" is not as it might see. It's not a web browser, but a web browser opener! You enter the URL of the website you want (including `http://`), and you'll be sent to the website. And, you also get to put in names for specific websites that lead to them with only the name!
 
-### The Two Types of "Web"
+### The Two Types of "WebOpen"
 
-Yes, there are two versions of "Web"! There is "WebGUI" (With GUI), and "WebCMD" (With No GUI, Just Terminal). Here are their differences!
+Yes, there are two versions of "WebOpen"! There is "WebGUI" (With GUI), and "WebCMD" (With No GUI, Just Terminal). Here are their differences!
 
 WebGUI:
 WebGUI opens in a `tkinter` window, allowing users to enter their URL into a user-friendly box! (Requires the `tkinter` module)
@@ -79,20 +79,20 @@ Have Fun Running commands via Python!
 ## System Info
 This application prints out the user's infomation onto their terminal screen. Here is a basic output of this application:
 
-`The Current User OS is:
-Linux
+`The Current User OS is:`
+`Linux`
 
-The Current User is:
-SoleStormCatPY_user
+`The Current User is:`
+`root`
 
-The Current Version of Python is:
-Python 3.10.6`
+`The Current Version of Python is:`
+`Python 3.10.6`
 
 ### How To Use
 Here is how you use "System Info":
 
-`import SoleStormCatPY.SystemInfo as SystemInfo
-SystemInfo.systemPrint()`
+`import SoleStormCatPY.SystemInfo as SystemInfo`
+`SystemInfo.systemPrint()`
 
 ## ClockTimer
 This application acts as a timer. The user can set the time (in minutes (Along with seconds and hours in the GUI)), or the developer can set the timer (in seconds). Everything will be printed out into the terminal (or the GUI), and will set the timer.

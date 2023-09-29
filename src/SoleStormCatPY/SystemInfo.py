@@ -1,7 +1,7 @@
 """ This gets/shows information about the user's system! Here is a way to use it:"
 import SoleStormCatPY.SystemInfo as SystemInfo
 
-SystemInfo.systemInfoPrint(deviceOS,userName,pythonVersion)
+SystemInfo.systemInfoPrint()
 
 
 -This Gets the system info, but does not print it:
@@ -25,7 +25,7 @@ def systemInfoFind():
 	return deviceOS, userName, pythonVersion
 
 
-def systemInfoPrint(deviceOS,userName,pythonVersion):
+def systemInfoPrintGET(deviceOS,userName,pythonVersion):
 	"PRINTS THE SYSTEM INFO"
 	deviceOS = systemInfoFind()
 	userName = systemInfoFind()
@@ -39,6 +39,10 @@ def systemInfoPrint(deviceOS,userName,pythonVersion):
 	print(' ')
 	print('The Current Python Version is:   ')
 	print(pythonVersion)
+
+def systemInfoPrint():
+	deviceOS, userName, pythonVersion = systemInfoFind()
+	systemInfoPrintGET(deviceOS,userName,pythonVersion)
 
 
 
