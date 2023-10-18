@@ -73,6 +73,42 @@ def webCMD(website):
 	elif website == 'PlayStation':
 		print('Sending you to PlayStation!')
 		webbrowser.open('https://playstation.com')
+	elif website == 'Apple':
+		print('Sending you to Apple!')
+		webbrowser.open('https://apple.com')
+	elif website == 'Proton':
+		print('Sending you to Proton!')
+		webbrowser.open('https://proton.me')
+	elif website == 'Snapchat':
+		print('Sending you to Snapchat!')
+		webbrowser.open('https://web.snapchat.com')
+	elif website == 'Twitch':
+		print('Sending you to Twitch!')
+		webbrowser.open('https://twitch.tv')
+	elif website == 'Xbox':
+		print('Sending you to Xbox!')
+		webbrowser.open('https://xbox.com')
+	elif website == 'ChatGPT':
+		print('Sending you to ChatGPT!')
+		webbrowser.open('https://chat.openai.com')
+	elif website == 'BardAI':
+		print('Sending you to Google Bard!')
+		webbrowser.open('https://bard.google.com')
+	elif website == 'GeForceNow':
+		print("Sending you to Nvidia GeForce Now!")
+		webbrowser.open('https://play.geforcenow.com')
+	elif website == 'XBCloud':
+		print('Sending you to Xbox Cloud Gaming!')
+		webbrowser.open('https://xbox.com/play')
+	elif website == 'GoogleVoice':
+		print('Sending you to Google Voice!')
+		webbrowser.open('https://voice.google.com')
+	elif website == 'Android':
+		print('Sending you to Android!')
+		webbrowser.open('https://android.com')
+	elif website == 'GitHubDev':
+		print("Sending you to GitHub's Visual Studio Code Developer page!")
+		webbrowser.open('https://github.dev')
 	else:
 		"This runs if the user's website is not in the list."
 		print('Sending you to: ', website, '!')
@@ -100,7 +136,7 @@ def webGUI():
 	command = webGUIinputGET)
 	gotoWebButton.pack()
 		
-	lbl = tk.Label(frame, text = "Enter a URL into the text box. Ensure that your URL contains 'http://'")
+	lbl = tk.Label(frame, text = "Enter your website's URL into the box above. Make sure that your URL does not have the name of a file/folder in your home folder.")
 	lbl.pack()
 	frame.mainloop()
 	

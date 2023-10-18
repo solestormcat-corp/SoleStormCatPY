@@ -22,12 +22,17 @@ cmd.terminalGUI()
 
 "This Imports the 'os' Module, which is used to run system commands!"
 import os
+import platform as pf
 
 "This Runs the command specified!"
 def terminalrun(command):
 	if command == 'UpgrdePyApp':
+		osV = pf.system()
 		print('Updating SoleStormCatPY!')
-		os.system('pip install --upgrade SoleStormCatPY')
+		if pf == 'Windows':
+			os.system('py -m pip install --upgrade SoleStormCatPY')
+		else:
+			os.system('python3 -m pip install --upgrade SoleStormCatPY')
 	else:
 		os.system(command)
 	

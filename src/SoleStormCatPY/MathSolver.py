@@ -13,11 +13,11 @@ pyms.numPrint(num1, num2, ty)
 def numPrint(num1, num2, ty):
 	"""This prints the numbers from your document. make sure your numbers are assigned to the names 'num1' and 'num2'. You must also have the type of math typed in as 'ty', as 'Divide', 'Multiply', 'Add', or 'Subtract'."""
 	
-	"""This changes the numbers inputted from strings into intergers, so changing the number strings to integers is not required!"""
+	"""This changes the numbers inputted from strings into numbers, so changing the number strings to integers is not required!"""
 	num1N = int(num1)
 	num2N = int(num2)
 	
-	"""This doese the type of math that the user wants"""
+	"""This does the type of math that the user wants"""
 	if ty == 'Divide':
 		"There are two ways of dividing, so both will be shown"
 		print('There are two different ways of dividing, so both will be shown below:  ')

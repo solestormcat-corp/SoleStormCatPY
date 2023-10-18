@@ -5,6 +5,13 @@ import SoleStormCatPY.ModuleInstaller
 "Module os is required to use 'pip' to download modules"
 import os
 
+"This Checks for SoleStormCatPY"
+try:
+	import SoleStormCatPY
+	print('SoleStormCatPY is installed!')
+except ModuleNotFoundError:
+	print('Module SoleStormCatPY was not found, installing!')
+	os.system('pip install SoleStormCatPY')
 "This Checks for 'tkinter'"
 try:
 	import tkinter
