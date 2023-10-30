@@ -6,6 +6,7 @@ SoleStormCatPY is an app developed to help you throughout your day. Here are som
 1. [Standalone App](https://www.geeksforgeeks.org/python-menu-widget-in-tkinter/)
 1. [ClockTimer and Standalone App](https://www.geeksforgeeks.org/creating-tabbed-widget-with-python-tkinter/) (FOR THE TAB FEATURE ONLY)
 1. [Files](https://data-flair.training/blogs/python-file-explorer-project/) (THIS IS A MODIFED VERSION OF THE PROJECT)
+1. [WebOpenGUI](https://stackoverflow.com/a/64363622) (For GUI Web Viewing Only)
 )
 ## Instaling SoleStormCatPY
 To install SoleStormCatPY, you can do either of the #:
@@ -26,24 +27,29 @@ To install `SoleStormCatPY` from SoleStormCat Corp's provided installer, simply 
 ### How To Use
 To Run "MathSolver" in your script, make sure to specify `num1` (Being the first number), `num2` (being your second number), and `ty` (being the type of math you require), along with the command `SoleStormCatPY.MathSolver.numPrint(num1, num2, ty)`.
 
+You may also run `SoleStormCatPY.MathSolver.numPrint('5','8','Divide')` when running MathSolver!
+
 Have Fun Mathing!
 
-## Web
+## WebOpen
 
 "WebOpen" is not as it might see. It's not a web browser, but a web browser opener! You enter the URL of the website you want (including `http://`), and you'll be sent to the website. And, you also get to put in names for specific websites that lead to them with only the name!
 
 ### The Two Types of "WebOpen"
 
-Yes, there are two versions of "WebOpen"! There is "WebGUI" (With GUI), and "WebCMD" (With No GUI, Just Terminal). Here are their differences!
+Yes, there are three versions of "WebOpen"! There is "WebGUI" (With GUI), "WebCMD" (With No GUI, Just Terminal), and "WebCMDgui" (GUI window, opens via terminal script). Here are their differences!
 
 WebGUI:
-WebGUI opens in a `tkinter` window, allowing users to enter their URL into a user-friendly box! (Requires the `tkinter` module)
+WebGUI opens in a `tkinter` window, allowing users to enter their URL into a user-friendly box! (Requires the `tkinter`, `PyQT5`, and `PyQTWebEngine` modules)
 
 WebCMD:
-WebCMD opens in the standard terminal window, this is great for opening a website the developer wants! (THIS WILL NOT WORK WITH `.pyw` FILES!)
+WebCMD opens in the standard terminal window, this is great for opening a website the developer wants! (THIS WILL NOT WORK WITH `.pyw` FILES!) (Requires `webbrowser` module!) (Opens in user's default browser)
+
+WebCMDgui:
+WebCMDgui allows you to input the website in the script, while opening the window in a SoleStormCat-Scripted window! (Requires `PyQT5` and `PyQTWebEngine` modules) (Does not use a user-specified browser, uses SoleStormCat-Scripted browser!)
 
 ### How To Use
-To Run "Web" in your script, make sure to specify `website` (being the URL (or name in some cases)), along with the command `SoleStormCatPY.WebOpen.webCMD(website)` (For WebCMD. Requires `webbrowser`), or `import SoleStormCatPY.WebOpen.WebGUI()` (For WebGUI. Requires both `webbrowser` and `tkinter`)
+To Run "WebOpen" in your script, make sure to specify `website` (being the URL (or name in some cases)) (with WebGUI Being an exeption), along with the command `SoleStormCatPY.WebOpen.webCMD(website)` (For WebCMD. Requires `webbrowser`), `import SoleStormCatPY.WebOpen.WebGUI()` (For WebGUI. Requires `PyQt5`, `PyQtWebEngine` and `tkinter`) or `SoleStormCatPY.WebOpen.webCMDgui(website)` (For WebCMDgui. Requires `PyQt5` and `PyQtWebEngine`)
 Have Fun Webbing!
 
 ### Websites With Names:
@@ -62,7 +68,7 @@ This meantions the certain websites that you can access by name. The Format for 
 1. [GitHub](https://github.com), "GitHub"
 1. [GitHub Developer](https://github.dev), "GitHubDev"
 1. [Google](https://google.com), "Google"
-1. [Local-Hosted Website](http://localhost), "Local"
+1. [Local-Hosted Website](http://127.0.0.1), "Local"
 1. [Microsoft 365](https://microsoft365.com), "Microsoft 365"
 1. [Minecraft](https://minecraft.net), "Minecraft"
 1. [Netflix](https://netflix.com), "Netflix"
@@ -70,7 +76,8 @@ This meantions the certain websites that you can access by name. The Format for 
 1. [Proton](https://proton.me), "Proton"
 1. [Python](https://python.org), "Python"
 1. [Snapchat](https://web.snapchat.com), "Snapchat"
-1. [SoleStormCatPY - GitHub](https://github.com/solestormcat-corp/solestormcatpy) and [SoleStormCatPY - PyPi](https://pypi.org/project/SoleStormCatPY/), "SoleStormCatPY"
+1. [SoleStormCatPY - GitHub](https://github.com/solestormcat-corp/solestormcatpy), "sscPY-GitHub"
+1. [SoleStormCatPY - PyPi](https://pipy.org/solestormcat-corp/solestormcatpy), "sscPY-PyPi"
 1. [Twitch](https://twitch.tv), "Twitch"
 1. [Twitter](https://twitter.com), "Twitter"
 1. [Roblox](https://roblox.com), "Roblox"
@@ -181,3 +188,29 @@ There are a couple issues to this app (and I require your help!):
 Since all operating systems are differnt, some use certain apps, while some do not. Some apps are located in different locations on the systems. Windows puts the files for the app in different places due to user restrictions. This makes it impossible for all apps to be supported!
 
 Sometimes, these systems put these files in the in the user's directory, and SoleStormCat Corp does not know how to fix this for apps on Windows machines (Linux and Mac use `~` as the home directory.)
+
+## Interactive Shell
+The Interactive Shell is an intercative terminal developed by SoleStormCat Corp. It holds custom commands, along with being able to use system commands!
+
+### How to Use
+There are two ways to open the interactive shell. The first being a blank shell, and the second opening the shell with a command.
+To open a blank shell, use `SoleStormCatPY.interactiveShell.shellOpen()`. To open a command shell, use `SoleStormCatPY.interactiveShell.shellUse('command')`.
+
+### Currently Supported commands
+The commands that are custom made are below:
+
+#### help
+`help` is a command that shows all the active commands that are made by SoleStormCat. 
+To find system commands, run `help --os`. 
+To find help for specific modules, run `help -m name` (with name being the module name.)
+
+#### sscpy
+`sscpy` is the opener for SoleStormCatPY. To open SoleStormCatPY in GUI, run `sscpy --gui`.
+
+#### python
+`python` is a coding platform developed by the Python Software Foundation.
+
+#### web
+`web` utilizes the SoleStormCatPY `webOpen` module to use a web browser.
+You can run `web --tk` to use a `tkinter` window for the URL asker.
+You can run `web --df` to use your defult browser.

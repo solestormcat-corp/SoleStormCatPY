@@ -14,13 +14,17 @@ if ask == 'yes':
 		os.system('py -m pip install --upgrade threading')
 		os.system('py -m pip install --upgrade subprocess')
 		os.system('py -m pip install --upgrade playsound')
+		os.system('py -m pip install --upgrade PyQt5')
+		os.system('py -m pip install --upgrade PyQtWebEngine')
 	else:
 		os.system('python3 -m pip install --upgrade SoleStormCatPY')
 		os.system('python3 -m pip install --upgrade tkinter')
 		os.system('python3 -m pip install --upgrade threading')
 		os.system('python3 -m pip install --upgrade subprocess')
 		os.system('python3 -m pip install --upgrade playsound')
-	input('The modules of "SoleStormCatPY", "tkinter", "threading", "subprocess", and "playsound" were installed (if not already). Entering the GUI of SoleStormCatPY!')
+		os.system('python3 -m pip install --upgrade PyQt5')
+		os.system('python3 -m pip install --upgrade PyQtWebEngine')
+	input('The modules of "SoleStormCatPY", "tkinter", "threading", "subprocess", "playsound", "PyQt5", and "PyQtWebEngine" were installed (if not already). Entering the GUI of SoleStormCatPY!')
 	import SoleStormCatPY.sscPyStandalone as standalone
 	standalone.fullPythonApp()
 	

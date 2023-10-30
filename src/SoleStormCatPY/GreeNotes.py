@@ -1,7 +1,7 @@
-"""This is a notepad taking service, which creates a ".sscGreeNotes" (It is hidden unless your file manager shows you hidden files), which allows you to save your own notes for future reference. Here is how you'll be able to run it (currently only supports terminal):
-import SoleStormCatPY.GreeNotes as notes
-notes.GreeNotes()
-"""
+#This is a notepad taking service, which creates a ".sscGreeNotes" (It is hidden unless your file manager shows you hidden files), which allows you to save your own notes for future reference. Here is how you'll be able to run it (currently only supports terminal):
+#import SoleStormCatPY.GreeNotes as notes
+#notes.GreeNotes()
+
 
 def GetNotesFile():
 	try:

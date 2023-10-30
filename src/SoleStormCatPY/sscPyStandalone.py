@@ -1,13 +1,13 @@
-"""This is the standalone app for 'SoleStormCatPY'. Here, any user can use 'SoleStormCatPY' with little to no coding (Depends on if the user uses a script to open this script). Here is how you can make your own script to open this app:
+#This is the standalone app for 'SoleStormCatPY'. Here, any user can use 'SoleStormCatPY' with little to no coding (Depends on if the user uses a script to open this script). Here is how you can make your own script to open this app:
 
-import SoleStormCatPY.sscPyStandalone as SSCstand
-SSCstand.fullPythonApp()
+#import SoleStormCatPY.sscPyStandalone as SSCstand
+#SSCstand.fullPythonApp()
 
-You can also use the Python app in the command prompt:
+#You can also use the Python app in the command prompt:
 
-import SoleStormCatPY.sscPyStandalone as SSCstand
-SSCstand.fullPythonAppCMD()
-"""
+#import SoleStormCatPY.sscPyStandalone as SSCstand
+#SSCstand.fullPythonAppCMD()
+
 
 from tkinter import *
 from tkinter.ttk import *
@@ -192,6 +192,9 @@ def fullPythonAppCMD():
 
 		print('Opening appOpener in GUI mode!')
 		app.openAppGUI()
+	elif myapp == 'Shell':
+		import SoleStormCatPY.interactiveShell as cmd
+		cmd.shellOpen()
 	else:
 		print('The app you are looking for is not found. Please take a look over the apps below and try again!')
 		print('Web')
@@ -209,3 +212,4 @@ def fullPythonAppCMD():
 		print('appOpener')
 		print('appOpenerGUI')
 		print('SSCPYgui')
+		print('Shell')

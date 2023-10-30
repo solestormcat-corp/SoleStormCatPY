@@ -1,14 +1,14 @@
-""" This gets/shows information about the user's system! Here is a way to use it:"
-import SoleStormCatPY.SystemInfo as SystemInfo
+#This gets/shows information about the user's system! Here is a way to use it:"
+#import SoleStormCatPY.SystemInfo as SystemInfo
+#
+#SystemInfo.systemInfoPrint()
 
-SystemInfo.systemInfoPrint()
 
+#This Gets the system info, but does not print it:
 
--This Gets the system info, but does not print it:
+#import SoleStormCatPY.SystemInfo as SystemInfo
+#SystemInfo.systemInfoFind()
 
-import SoleStormCatPY.SystemInfo as SystemInfo
-SystemInfo.systemInfoFind()
-"""
 
 import os
 import platform as pf
@@ -25,10 +25,11 @@ def systemInfoFind():
 		pythonVersion = os.system('python3 --version')
 	wifiinfo = sp.check_output(['netsh', 'WLAN', 'show', 'interfaces'])
 	wifissid = wifiinfo.decode('utf-8')
-	return deviceOS, userName, pythonVersion, wifissid
+	hostName = pf.node()
+	return deviceOS, userName, pythonVersion, wifissid, hostName
 
 
-def systemInfoPrintGET(deviceOS,userName,pythonVersion,wifissid):
+def systemInfoPrintGET(deviceOS,userName,pythonVersion,wifissid,hostName):
 	"PRINTS THE SYSTEM INFO"
 	deviceOS = systemInfoFind()
 	userName = systemInfoFind()
@@ -45,10 +46,12 @@ def systemInfoPrintGET(deviceOS,userName,pythonVersion,wifissid):
 	print(' ')
 	print('The Current Wifi is:     ')
 	print(wifissid)
+	print('The Current Host Name is:  ')
+	print(hostName)
 
 def systemInfoPrint():
-	deviceOS, userName, pythonVersion = systemInfoFind()
-	systemInfoPrintGET(deviceOS,userName,pythonVersion)
+	deviceOS, userName, pythonVersion, wifissid, hostName = systemInfoFind()
+	systemInfoPrintGET(deviceOS,userName,pythonVersion,wifissid,hostName)
 
 
 

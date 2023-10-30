@@ -1,18 +1,18 @@
-"""THIS APPLICATION HELPS A USER MAKE AN TIMER IN THE TERMINAL. TO RUN (DO NOT CHANGE THE 'minutes' WITHIN 'timer.clockTimer()':
-import SoleStormCatPY.ClockTimer as timer
+#THIS APPLICATION HELPS A USER MAKE AN TIMER IN THE TERMINAL. TO RUN (DO NOT CHANGE THE 'minutes' WITHIN 'timer.clockTimer()':
+#import SoleStormCatPY.ClockTimer as timer
+#
+#timer.clockTimerCMD(minutes)
 
-timer.clockTimerCMD(minutes)
-"""
-"""TO MANUALLY RUN THE TIMER BY THE DEVELOPER, RUN:
-import SoleStormCatPY.ClockTimer as timer
+#TO MANUALLY RUN THE TIMER BY THE DEVELOPER, RUN:
+#import SoleStormCatPY.ClockTimer as timer
+#
+#seconds = {"HOW MANY SECONDS YOU WANT. IF YOU REQUIRE MINUTES, USE "{minutes} * 60"}
+#timer.clockTimerManual(seconds)
 
-seconds = {"HOW MANY SECONDS YOU WANT. IF YOU REQUIRE MINUTES, USE "{minutes} * 60"}
-timer.clockTimerManual(seconds)
+#Here is how to run the GUI version of ClockTimer:
+#import SoleStormCatPY.ClockTimer as timer
+#timer.clockTimerGUI()
 
-Here is how to run the GUI version of ClockTimer:
-import SoleStormCatPY.ClockTimer as timer
-timer.clockTimerGUI()
-"""
 
 from threading import Timer
 import subprocess

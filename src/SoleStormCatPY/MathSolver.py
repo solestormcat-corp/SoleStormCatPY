@@ -1,12 +1,19 @@
-"""Your document will look something similar to this:
-import SoleStormCatPY.MathSolver as pyms
+#Your document will look something similar to this:
+#import SoleStormCatPY.MathSolver as pyms
+#
+#num1 = input("What number do you want first in your math problem?  ")
+#num2 = input("What number do you want second in your math problem?  ")
+#ty = input("Which type of equation do you want these numbers to be used with?   ")
+#
+#pyms.numPrint(num1, num2, ty)
 
-num1 = input("What number do you want first in your math problem?  ")
-num2 = input("What number do you want second in your math problem?  ")
-ty = input("Which type of equation do you want these numbers to be used with?   ")
+#OR You can do:
+#import SoleStormCatPY.MathSolver as pyms
+#
+#pyms.numPrint('5','8','Divide')
 
-pyms.numPrint(num1, num2, ty)
-"""
+#Although you require both num1, num2 and ty (for all methods), Square Root only uses num1 and ty, so num2 (is still required, but) can be any number you want!
+
 
 
 
@@ -34,5 +41,9 @@ def numPrint(num1, num2, ty):
 		print('There are two different ways of subtracting, so both ways will be shown below:  ')
 		print('The First way (Number 1 - Number 2) is: ', num1N - num2N)
 		print('The Second way (Number 2 - Number 1) is: ', num2N - num1N)
+	elif ty == 'SquareR':
+		"This is Square Root. Using square root dosnt use num2, so num2 can be anything without changing the equation!"
+		print('The Square root of ',num1N,'Is:')
+		print(num1N ** 0.5)
 		
 		

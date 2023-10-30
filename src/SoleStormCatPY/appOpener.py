@@ -1,11 +1,11 @@
-"""This allows for a user (or developer) to open a specific app. How to run this app:
-import SoleStormCatPY.appOpener
-SoleStormCatPY.appOpener.openAppManual('appname')
+#This allows for a user (or developer) to open a specific app. How to run this app:
+#import SoleStormCatPY.appOpener
+#SoleStormCatPY.appOpener.openAppManual('appname')
 
-OR
+#OR
 
-import SoleStormCatPY.appOpener
-SoleStormCatPY.appOpener.openApp()"""
+#import SoleStormCatPY.appOpener
+#SoleStormCatPY.appOpener.openApp()
 
 "Imports the os and platform modules"
 import os

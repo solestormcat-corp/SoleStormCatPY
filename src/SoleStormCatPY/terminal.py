@@ -1,24 +1,23 @@
-"""This brings the user's terminal into your Python script. Run any command you want. In this example, the user will enter their command:
+#This brings the user's terminal into your Python script. Run any command you want. In this example, the user will enter their command:
 
-import SoleStormCatPY.terminal as cmd
+#import SoleStormCatPY.terminal as cmd
+#
+#command = input("What Command Do You want to run?   ")
+#
+#cmd.terminalrun(command)
 
-command = input('''What command do you want the system to run?
-''')
+#This example runs your custom commands:
 
-cmd.terminalrun(command)
+#import SoleStormCatPY.terminal as cmd
+#
+#command = 'pip list'
+#cmd.terminalrun(command)
 
-This example runs your custom commands:
+#This Example Uses GUI, letting Users use their own commands, even if they want to use GUI!:
+#import SoleStormCatPY.terminal as cmd
+#
+#cmd.terminalGUI()
 
-import SoleStormCatPY.terminal as cmd
-
-command = 'pip list'
-cmd.terminalrun(command)
-
-This Example Uses GUI, letting Users use their own commands, even if they want to use GUI!:
-import SoleStormCatPY.terminal as cmd
-
-cmd.terminalGUI()
-"""
 
 "This Imports the 'os' Module, which is used to run system commands!"
 import os

@@ -1,127 +1,158 @@
-"""This document opens a web browser. Here is an example code (For Terminal Use)!:
-import SoleStormCatPY.WebOpen as web
+#This document opens a web browser. Here is an example code (For Terminal Use)!:
+# import SoleStormCatPY.WebOpen as web
+#
+# website = 'http://127.0.0.1'
+# web.webCMD(website)
 
-website = input('Which website do you want to visit? (Include https://)    ')
-web.webCMD(website)
+#Here is another example on how to use this! (For GUI Use)!:
+# import SoleStormCatPY.WebOpen as web
+#
+# web.webGUI()
 
-Here is another example on how to use this! (For GUI Use)!:
-import SoleStormCatPY.WebOpen as web
+#Here is an example of opening GUI using the command line:
+# import SoleStormCatPY.WebOpen as web
+#
+# web.webCMDgui('http://127.0.0.1')
 
-webGUI()
-"""
+
+def webList(website):
+	if website == 'Python':
+		print('Sending you to Python!')
+		websiteURL = 'https://python.org'
+	elif website == 'GitHub':
+		print('Sending you to GitHub!')
+		websiteURL = 'https://github.com'
+	elif website == 'Google':
+		print('Sending you to Google!')
+		websiteURL = 'https://google.com'
+	elif website == 'Bing':
+		print('Sending you to Bing!')
+		websiteURL = 'https://bing.com'
+	elif website == 'Facebook':
+		print('Sending you to Facebook!')
+		websiteURL = 'https://facebook.com'
+	elif website == 'Twitter':
+		print('Sending you to Twitter!')
+		websiteURL = 'https://twitter.com'
+	elif website == 'ChunkBase':
+		print('Sending you to ChunkBase!')
+		websiteURL = 'https://chunkbase.com'
+	elif website == 'Minecraft':
+		print('Sending you to Minecraft!')
+		websiteURL = 'https://minecraft.net'
+	elif website == 'Roblox':
+		print('Sending you to Roblox!')
+		websiteURL = 'https://roblox.com'
+	elif website == 'Microsoft 365':
+		print('Sending you to Microsoft 365!')
+		websiteURL = 'https://microsoft365.com'
+	elif website == 'YouTube':
+		print('Sending you to YouTube!')
+		websiteURL = 'https://youtube.com'
+	elif website == 'Steam':
+		print('Sending you to Steam!')
+		websiteURL = 'https://store.steampowered.com'
+	elif website == 'Walmart':
+		print('Sending you to Walmart!')
+		websiteURL = 'https://walmart.com'
+	elif website == 'Amazon':
+		print('Sending you to Amazon!')
+		websiteURL = 'https://amazon.com'
+	elif website == 'Local':
+		print('Sending you to your local website!')
+		websiteURL = 'http://127.0.0.1'
+	elif website == 'Ebay':
+		print('Sending you to Ebay!')
+		websiteURL = 'https://ebay.com'
+	elif website == 'Netflix':
+		print('Sending you to Netflix!')
+		websiteURL = 'https://netflix.com'
+	elif website == 'PlayStation':
+		print('Sending you to PlayStation!')
+		websiteURL = 'https://playstation.com'
+	elif website == 'Apple':
+		print('Sending you to Apple!')
+		websiteURL = 'https://apple.com'
+	elif website == 'Proton':
+		print('Sending you to Proton!')
+		websiteURL = 'https://proton.me'
+	elif website == 'Snapchat':
+		print('Sending you to Snapchat!')
+		websiteURL = 'https://web.snapchat.com'
+	elif website == 'Twitch':
+		print('Sending you to Twitch!')
+		websiteURL = 'https://twitch.tv'
+	elif website == 'Xbox':
+		print('Sending you to Xbox!')
+		websiteURL = 'https://xbox.com'
+	elif website == 'ChatGPT':
+		print('Sending you to ChatGPT!')
+		websiteURL = 'https://chat.openai.com'
+	elif website == 'BardAI':
+		print('Sending you to Google Bard!')
+		websiteURL = 'https://bard.google.com'
+	elif website == 'GeForceNow':
+		print("Sending you to Nvidia GeForce Now!")
+		websiteURL = 'https://play.geforcenow.com'
+	elif website == 'XBCloud':
+		print('Sending you to Xbox Cloud Gaming!')
+		websiteURL = 'https://xbox.com/play'
+	elif website == 'GoogleVoice':
+		print('Sending you to Google Voice!')
+		websiteURL = 'https://voice.google.com'
+	elif website == 'Android':
+		print('Sending you to Android!')
+		websiteURL = 'https://android.com'
+	elif website == 'GitHubDev':
+		print("Sending you to GitHub's Visual Studio Code Developer page!")
+		websiteURL = 'https://github.dev'
+	elif website == 'sscPY-GitHub':
+		print('Sending you to SoleStormCatPY GitHub!')
+		websiteURL = 'https://github.com/solestormcat-corp/solestormcatpy'
+	elif website == 'sscPY-PyPi':
+		print('Sending you to SoleStormCatPY PyPi!')
+		websiteURL = 'https://pypi.org/projects/solestormcatpy'
+	else:
+		print('Sending you to: ',website)
+		websiteURL = website
+	return websiteURL
 
 def webCMD(website):
 	"This imports the 'webbrowser' module"
 	import webbrowser
+
+	websiteURL = webList(website)
+	webbrowser.open(websiteURL)
 	
-	"This if-elif statement shows how the website should load. I have specified special websites (shown below as if and elif), and all the user needs to enter is the name"
-	if website == 'Python':
-		print('Sending you to Python!')
-		webbrowser.open('https://python.org')
-	elif website == 'GitHub':
-		print('Sending you to GitHub!')
-		webbrowser.open('https://github.com')
-	elif website == 'Google':
-		print('Sending you to Google!')
-		webbrowser.open('https://google.com')
-	elif website == 'Bing':
-		print('Sending you to Bing!')
-		webbrowser.open('https://bing.com')
-	elif website == 'Facebook':
-		print('Sending you to Facebook!')
-		webbrowser.open('https://facebook.com')
-	elif website == 'Twitter':
-		print('Sending you to Twitter!')
-		webbrowser.open('https://twitter.com')
-	elif website == 'ChunkBase':
-		print('Sending you to ChunkBase!')
-		webbrowser.open('https://chunkbase.com')
-	elif website == 'Minecraft':
-		print('Sending you to Minecraft!')
-		webbrowser.open('https://minecraft.net')
-	elif website == 'Roblox':
-		print('Sending you to Roblox!')
-		webbrowser.open('https://roblox.com')
-	elif website == 'Microsoft 365':
-		print('Sending you to Microsoft 365!')
-		webbrowser.open('https://microsoft365.com')
-	elif website == 'YouTube':
-		print('Sending you to YouTube!')
-		webbrowser.open('https://youtube.com')
-	elif website == 'Steam':
-		print('Sending you to Steam!')
-		webbrowser.open('https://store.steampowered.com')
-	elif website == 'Walmart':
-		print('Sending you to Walmart!')
-		webbrowser.open('https://walmart.com')
-	elif website == 'Amazon':
-		print('Sending you to Amazon!')
-		webbrowser.open('https://amazon.com')
-	elif website == 'Local':
-		print('Sending you to your local website!')
-		webbrowser.open('http://localhost')
-	elif website == 'Ebay':
-		print('Sending you to Ebay!')
-		webbrowser.open('https://ebay.com')
-	elif website == 'SoleStormCatPY':
-		print("Sending you to SoleStormCatPY's GitHub and PyPi websites!")
-		webbrowser.open('https://github.com/solestormcat-corp/solestormcatpy')
-		webbrowser.open('https://pypi.org/project/SoleStormCatPY')
-	elif website == 'Netflix':
-		print('Sending you to Netflix!')
-		webbrowser.open('https://netflix.com')
-	elif website == 'PlayStation':
-		print('Sending you to PlayStation!')
-		webbrowser.open('https://playstation.com')
-	elif website == 'Apple':
-		print('Sending you to Apple!')
-		webbrowser.open('https://apple.com')
-	elif website == 'Proton':
-		print('Sending you to Proton!')
-		webbrowser.open('https://proton.me')
-	elif website == 'Snapchat':
-		print('Sending you to Snapchat!')
-		webbrowser.open('https://web.snapchat.com')
-	elif website == 'Twitch':
-		print('Sending you to Twitch!')
-		webbrowser.open('https://twitch.tv')
-	elif website == 'Xbox':
-		print('Sending you to Xbox!')
-		webbrowser.open('https://xbox.com')
-	elif website == 'ChatGPT':
-		print('Sending you to ChatGPT!')
-		webbrowser.open('https://chat.openai.com')
-	elif website == 'BardAI':
-		print('Sending you to Google Bard!')
-		webbrowser.open('https://bard.google.com')
-	elif website == 'GeForceNow':
-		print("Sending you to Nvidia GeForce Now!")
-		webbrowser.open('https://play.geforcenow.com')
-	elif website == 'XBCloud':
-		print('Sending you to Xbox Cloud Gaming!')
-		webbrowser.open('https://xbox.com/play')
-	elif website == 'GoogleVoice':
-		print('Sending you to Google Voice!')
-		webbrowser.open('https://voice.google.com')
-	elif website == 'Android':
-		print('Sending you to Android!')
-		webbrowser.open('https://android.com')
-	elif website == 'GitHubDev':
-		print("Sending you to GitHub's Visual Studio Code Developer page!")
-		webbrowser.open('https://github.dev')
-	else:
-		"This runs if the user's website is not in the list."
-		print('Sending you to: ', website, '!')
-		webbrowser.open(website)
-		
-		
+from PyQt5.QtCore import *
+from PyQt5.QtWebEngineWidgets import *
+from PyQt5.QtWidgets import QApplication
+import sys
+
+def webCMDgui(website):
+	websiteURL = webList(website)
+
+	app = QApplication(sys.argv)
+	web = QWebEngineView()
+	web.load(QUrl(websiteURL))
+	web.show()
+	sys.exit(app.exec_())
+
 def webGUI():
 	import tkinter as tk
 	
+	
 	def webGUIinputGET():
 		website = inputtxt.get(1.0, "end-1c")
-		webCMD(website)
-	
+		websiteURL = webList(website)
+		 
+		app = QApplication(sys.argv)
+ 
+		web = QWebEngineView()
+		web.load(QUrl(websiteURL))
+		web.show()
+		sys.exit(app.exec_())
+
 	frame = tk.Tk()
 	frame.title("SoleStormCatPY - WebOpen")
 	frame.geometry('500x125')

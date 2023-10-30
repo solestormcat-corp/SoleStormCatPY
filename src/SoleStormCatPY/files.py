@@ -1,13 +1,13 @@
-"""This Implements a file explorer into Python. Here is how you use it (Terminal Version):
-import SoleStormCatPY.files as sscfile
-sscfile.filesCMD()
+#This Implements a file explorer into Python. Here is how you use it (Terminal Version):
+#import SoleStormCatPY.files as sscfile
+#sscfile.filesCMD()
 
-To Use this in the GUI, use:
-import SoleStormCatPY.files as sscfile
-sscfile.filesGUI()
+#To Use this in the GUI, use:
+#import SoleStormCatPY.files as sscfile
+#sscfile.filesGUI()
 
 
-This is a modified version of a file explorer from https://data-flair.training/blogs/python-file-explorer-project/"""
+#This is a modified version of a file explorer from https://data-flair.training/blogs/python-file-explorer-project/
 import os
 from tkinter import *
 
