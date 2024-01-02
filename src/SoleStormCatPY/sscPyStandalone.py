@@ -34,6 +34,25 @@ def FilesGUI():
 def appOpenerGUI():
 	import SoleStormCatPY.appOpener as app
 	app.openAppGUI()
+def interactiveShell():
+	import SoleStormCatPY.interactiveShell as ishell
+	shellframe = Tk()
+	shellframe.title('InteractiveShell - GUI')
+	shellframe.geometry('500x125')
+
+	def runCommand():
+		command = commandBOX.get(1.0, "end-1c")
+		computerLBL.config(text='Continue in your terminal')
+		ishell.shellUse(command)
+
+	computerLBL = Label(shellframe, text='Enter a command below')
+	computerLBL.pack()
+	commandBOX = Text(shellframe, height=1, width=45)
+	commandBOX.pack()
+	commandRunB = Button(shellframe, text='Run Command', command=runCommand)
+	commandRunB.pack()
+
+	shellframe.mainloop()
 
 def SoleStormCatUpdate():
 	UpgradeFrame = Tk()
@@ -51,7 +70,7 @@ def SoleStormCatUpdate():
 	else:
 		os.system('python3 -m pip install --upgrade SoleStormCatPY')
 	
-	UpgradeLabel.mainloop()
+	UpgradeFrame.mainloop()
 	
 "App Loader:"
 def fullPythonApp():
@@ -73,6 +92,7 @@ def fullPythonApp():
 	appsBar.add_command(label ="Web", command=WebGUI)
 	appsBar.add_command(label ="Files", command=FilesGUI)
 	appsBar.add_command(label ="appOpener", command=appOpenerGUI)
+	appsBar.add_command(label ='interactiveShell', command=interactiveShell)
 	
 	"GUI TAB"
 	appLabel = Label(frame, text = 'Welcome to "SoleStormCatPY"! Please choose an app below!')
@@ -100,6 +120,8 @@ def fullPythonApp():
 	appOpenerGUIB = Button(frame, text='appOpener', command=lambda: appOpenerGUI())
 	appOpenerGUIB.pack()
 
+	interactiveShellGUIB = Button(frame, text='interactiveShell', command=lambda: interactiveShell())
+	interactiveShellGUIB.pack()
 	
 	frame.config(menu = MenuBar)
 	frame.mainloop()
@@ -195,6 +217,9 @@ def fullPythonAppCMD():
 	elif myapp == 'Shell':
 		import SoleStormCatPY.interactiveShell as cmd
 		cmd.shellOpen()
+	elif myapp == 'unixTime':
+		import SoleStormCatPY.interactiveShell as CMD
+		CMD.shellUse('unixTime')
 	else:
 		print('The app you are looking for is not found. Please take a look over the apps below and try again!')
 		print('Web')
@@ -213,3 +238,4 @@ def fullPythonAppCMD():
 		print('appOpenerGUI')
 		print('SSCPYgui')
 		print('Shell')
+		print('unixTime')
